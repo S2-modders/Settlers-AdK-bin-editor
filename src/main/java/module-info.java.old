@@ -1,0 +1,10 @@
+module de.zocker160.adk.analyzer.binanalyzer {
+    requires javafx.controls;
+    requires javafx.fxml;
+
+    requires org.controlsfx.controls;
+    //requires org.kordamp.ikonli.javafx;
+
+    opens de.zocker160.adk.analyzer.binanalyzer to javafx.fxml;
+    exports de.zocker160.adk.analyzer.binanalyzer;
+}

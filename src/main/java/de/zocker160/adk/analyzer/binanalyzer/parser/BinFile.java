@@ -2,7 +2,7 @@ package de.zocker160.adk.analyzer.binanalyzer.parser;
 
 import com.google.common.io.LittleEndianDataInputStream;
 import com.google.common.io.LittleEndianDataOutputStream;
-import de.zocker160.adk.analyzer.binanalyzer.ColorUtil;
+import de.zocker160.adk.analyzer.binanalyzer.utils.ColorUtil;
 import javafx.scene.paint.Color;
 
 import java.io.*;

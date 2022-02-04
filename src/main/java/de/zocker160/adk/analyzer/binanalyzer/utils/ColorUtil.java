@@ -1,4 +1,4 @@
-package de.zocker160.adk.analyzer.binanalyzer;
+package de.zocker160.adk.analyzer.binanalyzer.utils;
 
 import com.google.common.io.LittleEndianDataInputStream;
 import com.google.common.io.LittleEndianDataOutputStream;

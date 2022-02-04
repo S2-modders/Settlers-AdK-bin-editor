@@ -2,6 +2,7 @@ package de.zocker160.adk.analyzer.binanalyzer;
 
 import de.zocker160.adk.analyzer.binanalyzer.parser.BinFile;
 import de.zocker160.adk.analyzer.binanalyzer.parser.FogZone;
+import de.zocker160.adk.analyzer.binanalyzer.utils.Settings;
 import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
@@ -25,7 +26,7 @@ public class MainWindow extends Application {
         MainWindow.stage = stage;
         MainWindow.controller = fxmlLoader.getController();
 
-        stage.setTitle("AdK BIN Editor");
+        stage.setTitle(Settings.APPLICATION_NAME+" "+ Settings.VERSION);
         stage.setScene(scene);
         stage.show();
     }

@@ -43,7 +43,7 @@
                               <Insets left="10.0" right="10.0" />
                            </padding>
                         </Button>
-                        <Button mnemonicParsing="false" onAction="#onSaveFile" prefHeight="25.0" prefWidth="80.0" text="Save..">
+                        <Button disable="true" mnemonicParsing="false" prefHeight="25.0" prefWidth="80.0" text="...">
                            <HBox.margin>
                               <Insets />
                            </HBox.margin>
@@ -52,6 +52,29 @@
                            </padding>
                         </Button>
                      </children>
+                  </HBox>
+                  <HBox alignment="CENTER" layoutX="10.0" layoutY="448.0" spacing="10.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#saveFile" prefHeight="25.0" prefWidth="80.0" text="Save">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#saveFileAs" prefHeight="25.0" prefWidth="80.0" text="Save as..">
+                           <HBox.margin>
+                              <Insets />
+                           </HBox.margin>
+                           <padding>
+                              <Insets left="10.0" right="10.0" />
+                           </padding>
+                        </Button>
+                     </children>
+                     <padding>
+                        <Insets top="10.0" />
+                     </padding>
                   </HBox>
                </children>
             </VBox>

@@ -5,6 +5,7 @@ import javafx.scene.control.*;
 import javafx.scene.effect.ImageInput;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.FileChooser;
 
 import java.io.File;
 
@@ -67,7 +68,22 @@ public class MainWindowController {
     }
 
     @FXML
-    protected void onSaveFile() {
+    protected void saveFileAs() {
+        var fileChooser = new FileChooser();
+        fileChooser.setTitle("Save file...");
+        fileChooser.getExtensionFilters().addAll(
+                new FileChooser.ExtensionFilter("AdK BIN file", "*.bin"),
+                new FileChooser.ExtensionFilter("All files", "*.*")
+        );
+
+        File file = fileChooser.showSaveDialog(MainWindow.getStage());
+        try {
+            MainWindow.saveToFile(file);
+        } catch (NullPointerException ignore) {}
+    }
+
+    @FXML
+    protected void saveFile() {
         try {
             MainWindow.saveToFile();
         } catch (NullPointerException ignore) {}

@@ -68,6 +68,10 @@ public class BinFile {
         }
     }
 
+    public void save() {
+        this.save(this.file);
+    }
+
     public void save(File file) {
         try (var outputStream = new LittleEndianDataOutputStream(new FileOutputStream(file))) {
             outputStream.writeInt(this.unknown);

@@ -75,17 +75,22 @@ public class MainWindow extends Application {
 
     protected static void saveToFile() {
         if (data == null) return;
+        saveUiData();
+        data.save();
+    }
 
-        var fileChooser = new FileChooser();
-        fileChooser.setTitle("Save file...");
-        fileChooser.getExtensionFilters().addAll(
-            new FileChooser.ExtensionFilter("AdK BIN file", "*.bin"),
-            new FileChooser.ExtensionFilter("All files", "*.*")
-        );
+    protected static void saveToFile(File file) {
+        if (data == null) return;
+        saveUiData();
+        data.save(file);
+    }
 
-        File file = fileChooser.showSaveDialog(stage);
+    private static void saveUiData() {
+        saveGlobal();
+        saveZone(controller.getCurrentZone());
+    }
 
-        // global settings
+    private static void saveGlobal() {
         BinFile binFile = data;
 
         binFile.setValue1(controller.value1.getText());
@@ -99,11 +104,6 @@ public class MainWindow extends Application {
         binFile.fogColor = controller.fogColor.getValue();
         binFile.ambientColor = controller.ambientColor.getValue();
         binFile.lightColor = controller.lightColor.getValue();
-
-        // current zone
-        saveZone(controller.getCurrentZone());
-
-        data.save(file);
     }
 
     protected static void loadZone(int zone) {

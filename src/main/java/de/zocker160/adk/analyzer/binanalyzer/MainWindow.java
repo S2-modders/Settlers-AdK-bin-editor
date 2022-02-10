@@ -52,6 +52,12 @@ public class MainWindow extends Application {
 
         File file = fileChooser.showOpenDialog(stage);
 
+        return openFile(file);
+    }
+
+    protected static String openFile(File file) {
+        System.out.println("Loading file: "+file.getAbsolutePath());
+
         BinFile binFile = BinFile.loadFile(file);
         data = binFile;
 
@@ -72,6 +78,7 @@ public class MainWindow extends Application {
 
         return file.getName();
     }
+
 
     protected static void saveToFile() {
         if (data == null) return;

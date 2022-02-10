@@ -1,16 +1,22 @@
 package de.zocker160.adk.analyzer.binanalyzer;
 
+import de.zocker160.adk.analyzer.binanalyzer.utils.ListFile;
 import javafx.fxml.FXML;
 import javafx.scene.control.*;
 import javafx.scene.effect.ImageInput;
 import javafx.scene.layout.GridPane;
 import javafx.scene.layout.VBox;
+import javafx.stage.DirectoryChooser;
 import javafx.stage.FileChooser;
 
+import javax.swing.filechooser.FileFilter;
+import javax.swing.filechooser.FileNameExtensionFilter;
 import java.io.File;
+import java.io.FilenameFilter;
 
 public class MainWindowController {
     @FXML private Label filenameLabel;
+    @FXML private Label messageLabel;
 
     // Global ---
 
@@ -22,7 +28,9 @@ public class MainWindowController {
     @FXML protected TextField fogStart;
     @FXML protected TextField fogEnd;
 
-    @FXML private ListView<String> zonesList;
+    @FXML private ListView<ListFile> filesList;
+    @FXML private Label directoryLocation;
+
     @FXML private GridPane dataGrid;
     @FXML private Slider testSlider;
 
@@ -58,12 +66,61 @@ public class MainWindowController {
     @FXML protected TextField radiusEndZone;
 
     @FXML
-    protected void onOpenFile() {
+    protected void openFile() {
         try {
             String filename = MainWindow.openFile();
             filenameLabel.setText(filename);
+
+            dataGrid.setDisable(false);
+            filesList.getItems().clear();
+            directoryLocation.setText("<no folder selected>");
+
+        } catch (NullPointerException ignore) {}
+    }
+
+    @FXML
+    protected void openFileFromList() {
+        ListFile file = filesList.getSelectionModel().getSelectedItem();
+
+        try {
+            String filename = MainWindow.openFile(file);
+            filenameLabel.setText(filename);
             dataGrid.setDisable(false);
 
+        } catch (NullPointerException ignore) {}
+    }
+
+    @FXML
+    protected void openFolder() {
+        var dirChooser = new DirectoryChooser();
+        var filter = new FilenameFilter() {
+            @Override
+            public boolean accept(File dir, String name) {
+                return name.endsWith(".bin");
+            }
+        };
+
+        dirChooser.setTitle("Select directory containing BIN files");
+        File binDir = dirChooser.showDialog(MainWindow.getStage());
+
+        try {
+            filesList.getItems().clear();
+
+            for (File file : binDir.listFiles(filter)) {
+                System.out.println(file);
+                filesList.getItems().add(new ListFile(file));
+            }
+            directoryLocation.setText(binDir.getName());
+
+        } catch (NullPointerException ignore) {
+            return;
+        }
+    }
+
+    @FXML
+    protected void saveFile() {
+        try {
+            MainWindow.saveToFile();
         } catch (NullPointerException ignore) {}
     }
 
@@ -79,13 +136,6 @@ public class MainWindowController {
         File file = fileChooser.showSaveDialog(MainWindow.getStage());
         try {
             MainWindow.saveToFile(file);
-        } catch (NullPointerException ignore) {}
-    }
-
-    @FXML
-    protected void saveFile() {
-        try {
-            MainWindow.saveToFile();
         } catch (NullPointerException ignore) {}
     }
 

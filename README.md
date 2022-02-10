@@ -3,7 +3,7 @@ Editor for the `.bin` files of the maps of "Aufbruch der Kulturen".
 
 **NOTE:** This software is still WiP.
 
-![screenshot](images/Screenshot_20220204_134553.png)
+![screenshot](images/v0.2.png)
 
 ## How to run
 

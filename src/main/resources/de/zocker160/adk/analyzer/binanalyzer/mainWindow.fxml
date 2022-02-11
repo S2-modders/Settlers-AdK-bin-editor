@@ -145,8 +145,8 @@
                               <Label text="fog area" GridPane.rowIndex="10" />
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.columnIndex="1" GridPane.rowIndex="10">
                                  <children>
-                                    <TextField fx:id="fogStart" alignment="CENTER" maxWidth="60.0" promptText="start" />
-                                    <TextField fx:id="fogEnd" alignment="CENTER" maxWidth="60.0" promptText="end" />
+                                    <TextField fx:id="fogStart" alignment="CENTER" maxWidth="80.0" promptText="start" />
+                                    <TextField fx:id="fogEnd" alignment="CENTER" maxWidth="80.0" promptText="end" />
                                  </children>
                               </HBox>
                               <TextField fx:id="value4" alignment="CENTER" maxWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="9" />
@@ -207,8 +207,8 @@
                               <Label text="fog area" GridPane.rowIndex="7" />
                               <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" spacing="40.0" GridPane.columnIndex="1" GridPane.rowIndex="7">
                                  <children>
-                                    <TextField fx:id="fogStartZone" alignment="CENTER" maxWidth="60.0" promptText="start" />
-                                    <TextField fx:id="fogEndZone" alignment="CENTER" maxWidth="60.0" promptText="end" />
+                                    <TextField fx:id="fogStartZone" alignment="CENTER" maxWidth="80.0" promptText="start" />
+                                    <TextField fx:id="fogEndZone" alignment="CENTER" maxWidth="80.0" promptText="end" />
                                  </children>
                               </HBox>
                               <TextField fx:id="shadowDensityZone" alignment="CENTER" maxWidth="60.0" GridPane.columnIndex="1" GridPane.rowIndex="6" />

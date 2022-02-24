@@ -1,0 +1,17 @@
+{
+  "comments": [],
+  "highlights": [],
+  "data_types": [
+    {
+      "offset": 0,
+      "length": 12,
+      "type": "u32le"
+    },
+    {
+      "offset": 12,
+      "length": 116,
+      "type": "f32le"
+    }
+  ],
+  "virt_mappings": []
+}

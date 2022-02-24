@@ -1,0 +1,58 @@
+{
+  "comments": [
+    {
+      "offset": 4,
+      "length": 76,
+      "text": "entry"
+    },
+    {
+      "offset": 80,
+      "length": 76,
+      "text": "entry"
+    },
+    {
+      "offset": 156,
+      "length": 76,
+      "text": "entry"
+    },
+    {
+      "offset": 232,
+      "length": 76,
+      "text": "entry"
+    },
+    {
+      "offset": 308,
+      "length": 76,
+      "text": "entry"
+    },
+    {
+      "offset": 384,
+      "length": 76,
+      "text": "entry"
+    },
+    {
+      "offset": 460,
+      "length": 76,
+      "text": "entry"
+    },
+    {
+      "offset": 536,
+      "length": 76,
+      "text": "entry"
+    },
+    {
+      "offset": 612,
+      "length": 76,
+      "text": "entry"
+    }
+  ],
+  "highlights": [],
+  "data_types": [
+    {
+      "offset": 4,
+      "length": 76,
+      "type": "f32le"
+    }
+  ],
+  "virt_mappings": []
+}

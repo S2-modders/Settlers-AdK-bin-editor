@@ -1,0 +1,118 @@
+{
+  "comments": [
+    {
+      "offset": 0,
+      "length": 4,
+      "text": "unknown (maybe skybox type?)"
+    },
+    {
+      "offset": 0,
+      "length": 60,
+      "text": "global settings"
+    },
+    {
+      "offset": 4,
+      "length": 4,
+      "text": "lightheading (0 - 360)"
+    },
+    {
+      "offset": 8,
+      "length": 4,
+      "text": "daytime (0 - 200)\n100 = midday"
+    },
+    {
+      "offset": 12,
+      "length": 12,
+      "text": "fog color (0  - 1)  ???\n-------\nlight color\ngreen\nred\nblue\n\n"
+    },
+    {
+      "offset": 24,
+      "length": 12,
+      "text": "ambient color (0 - 1)"
+    },
+    {
+      "offset": 36,
+      "length": 12,
+      "text": "light color"
+    },
+    {
+      "offset": 48,
+      "length": 4,
+      "text": "shadow density (negative possible)"
+    },
+    {
+      "offset": 52,
+      "length": 8,
+      "text": "fog values"
+    },
+    {
+      "offset": 60,
+      "length": 4,
+      "text": "number of local zones"
+    },
+    {
+      "offset": 64,
+      "length": 12,
+      "text": "fog color"
+    },
+    {
+      "offset": 64,
+      "length": 64,
+      "text": "local zone 1"
+    },
+    {
+      "offset": 76,
+      "length": 12,
+      "text": "ambient color"
+    },
+    {
+      "offset": 88,
+      "length": 12,
+      "text": "light color"
+    },
+    {
+      "offset": 100,
+      "length": 4,
+      "text": "shadow density"
+    },
+    {
+      "offset": 104,
+      "length": 8,
+      "text": "fog values"
+    },
+    {
+      "offset": 112,
+      "length": 8,
+      "text": "coords relative to middle point of map"
+    },
+    {
+      "offset": 120,
+      "length": 8,
+      "text": "start / end radius of zone 2"
+    }
+  ],
+  "highlights": [],
+  "data_types": [
+    {
+      "offset": 0,
+      "length": 12,
+      "type": "u32le"
+    },
+    {
+      "offset": 12,
+      "length": 48,
+      "type": "f32le"
+    },
+    {
+      "offset": 60,
+      "length": 4,
+      "type": "u32le"
+    },
+    {
+      "offset": 64,
+      "length": 64,
+      "type": "f32le"
+    }
+  ],
+  "virt_mappings": []
+}

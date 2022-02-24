@@ -1,0 +1,47 @@
+{
+  "comments": [],
+  "highlights": [],
+  "data_types": [
+    {
+      "offset": 0,
+      "length": 4,
+      "type": "u32le"
+    },
+    {
+      "offset": 4,
+      "length": 20,
+      "type": "f32le"
+    },
+    {
+      "offset": 24,
+      "length": 4,
+      "type": "u32le"
+    },
+    {
+      "offset": 28,
+      "length": 4,
+      "type": "s32le"
+    },
+    {
+      "offset": 32,
+      "length": 4,
+      "type": "u32le"
+    },
+    {
+      "offset": 36,
+      "length": 44,
+      "type": "f32le"
+    },
+    {
+      "offset": 80,
+      "length": 4,
+      "type": "u32le"
+    },
+    {
+      "offset": 84,
+      "length": 604,
+      "type": "f32le"
+    }
+  ],
+  "virt_mappings": []
+}
